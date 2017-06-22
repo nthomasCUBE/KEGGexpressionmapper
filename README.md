@@ -1,4 +1,4 @@
-KEGGexpressionMapper v0.1
+#KEGGexpressionMapper v0.1
 
 The KEGGexpressionMapper is a R package, that allows to visualize the expression of genes or can illustrate the abundances of proteins. 
 
