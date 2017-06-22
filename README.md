@@ -1,15 +1,16 @@
-# KEGGexpressionmapper
+KEGGexpressionMapper v0.1
 
-(still under construction...)
+The KEGGexpressionMapper is a R package, that allows to visualize the expression of genes or can illustrate the abundances of proteins. 
 
-This is a R workbench, that can be used to visualise the expression or the abundancy
-of proteomics data for particular KEGG pathway, or even the entire pathway set.
+It can be started by invoking the method “KEGGexpressionMapper(expression_mapping_file, kegg_to_gene_mapping_file, gene_candidate_file).
 
-The script can be started by invoking
-> KEGGExpressionsmapper
+Parameter: Expression_Mapping_file contains the genes in the first row, following by the expression of each conditions. The values per conditions are seperated by a “,”.
 
-Then, the KEGG pathway after another is downloaded from the KEGG website and is then
-replacing the pathway illustration by the color-information expression or abundance.
+Parameter: Kegg_to_gene_mapping_file contains the mapping of genes to the KEGG orthologous.
+Parameter: gene_candidate_file contains the genes, that should be highlighted in the expression-informed visualisation.
 
-Finally, the expression and abundance informed pathways, as well as the enriched pathways containing
-more genes than expected can be downloaded and further manually assessed.
+Help:
+For further requests and information, the following email can be used: thomas.nussbaumer@univie.ac.at .
+
+
+
