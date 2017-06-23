@@ -9,10 +9,12 @@ wget https://github.com/nthomasCUBE/KEGGexpressionmapper/archive/v0.1c.tar.gz
 
 ### Step-2: install it in R
 open R
-- install.packages('v0.1c.tar.gz')
-- library(KEGGexpressionMapper)
-- KEGGexpressionMapper(expression_mapping_file, kegg_to_gene_mapping_file, gene_candidate_file)
 
+```bash
+install.packages('v0.1c.tar.gz')
+library(KEGGexpressionMapper)
+KEGGexpressionMapper(expression_mapping_file, kegg_to_gene_mapping_file, gene_candidate_file)
+```
 You need to refer to the absolut or the relative path of each parameter.
 
 ### Alternative: Running demo data
