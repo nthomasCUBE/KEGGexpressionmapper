@@ -1,13 +1,11 @@
 # KEGGexpressionMapper v0.1, Last update: 22 June 2017
 The KEGGexpressionMapper is bundled within a R package, allowing to visualize the expression of genes or abundances of proteins for any given species. The user need to provide a mapping to the expression (expression_mapping_file), a mapping to the KEGG orthologous (keg_to_gene_mapping_file), and a mapping of selected gene_candidate (gene_candidate_file). When a user has provided all these information, at first the KEGGexpressionMapper makes a lookup to find which pathways are associated with a KEGG ortholog, then for each pathway it visualizes the expression or protein abundancies by extracting the PNG visualisation and modifying them with the R-package PNG.
 ## How to run it and install it
-It can be started by invoking the method “KEGGexpressionMapper(expression_mapping_file, kegg_to_gene_mapping_file, gene_candidate_file). The R package can be installed by extracting the github project. 
 
-Copy the zip directory of KEGGexpressionMapper.zip, unzip and run the following command in R:
-setwd("..")
-install("KEGGexpressionMapper")
-
-Finally
+Please copy the R package from: https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1096508/KEGGexpressionMapper_v0.1.tar.gz 
+or (Release option). Then, the R package can be easily installed with install.packages("KEGGexpressionMapper_v0.1.tar.gz")
+which then allows to load the library (library("KEGGExpressionMapper")
+and running the tool with
 KEGGexpressionMapper(expression_mapping_file, kegg_to_gene_mapping_file, gene_candidate_file)
 
 ## Parameter explaination
