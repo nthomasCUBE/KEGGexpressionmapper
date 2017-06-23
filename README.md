@@ -4,14 +4,17 @@ The KEGGexpressionMapper allows to visualize the expression of genes or the abun
 ## How to run it and install it
 
 First, extract the latest version of the KEGGexpressionmapper (e.g. https://github.com/nthomasCUBE/KEGGexpressionmapper/archive/v0.1b.tar.gz)
-Step-1: Get release
+
+###Step-1: Get release
 wget https://github.com/nthomasCUBE/KEGGexpressionmapper/archive/v0.1b.tar.gz
-Step-2: install it in R
+
+###Step-2: install it in R
 open R
 install.packages(‘v0.1b.tar.gz’)
 library(KEGGexpressionMapper)
 KEGGexpressionMapper(expression_mapping_file, keg_to_gene_mapping_file, gene_candidate_file)
-Alternative: Running demo data
+
+###Alternative: Running demo data
 If you want the run the demo example, please copy the example data to your current directory: https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1097447/example.zip
 Then, it is possible to calculate the clams data as described in our manuscript.
 KEGGexpressionMapper()
