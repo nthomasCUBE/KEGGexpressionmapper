@@ -27,7 +27,7 @@ Parameter: Expression_Mapping_file contains the genes in the first row, followed
 
 The file should have the following structure:
 ```bash
-***Gene conditionA conditionB conditionC conditionD***
+Gene conditionA conditionB conditionC conditionD
 Gene1 1 3 5 10
 Gene2 20 5 3 5
 ```
@@ -37,7 +37,7 @@ Gene1 and Gene2 represent the gene identifier. '1' describes the expression in t
 Parameter: Kegg_to_gene_mapping_file contains the mapping of genes to the KEGG orthologous.
 The file should have the following structure:
 ```bash
-***Gene KEGG_orthologous***
+Gene KEGG_orthologous
 Gene1 KO111
 Gene2 KO22
 ```
@@ -47,7 +47,7 @@ Gene1 has the KEGG orthologous gene assingment KO111 and Gene2 the KEGG ortholog
 Parameter: gene_candidate_file contains the genes, that should be highlighted in the expression-informed visualisation.
 The file should have the following structure
 ```bash
-***Gene***
+Gene
 Gene1
 Gene11
 Gene55
