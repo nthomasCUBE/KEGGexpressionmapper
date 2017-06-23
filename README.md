@@ -26,9 +26,10 @@ KEGGexpressionMapper()
 Parameter: Expression_Mapping_file contains the genes in the first row, following by the expression of each conditions. The values need to be seperated by a blank.
 
 The file should have the following structure:
-x Gene conditionA conditionB conditionC conditionD
-x Gene1 1 3 5 10
-x Gene2 20 5 3 5
+- Gene conditionA conditionB conditionC conditionD
+- Gene1 1 3 5 10
+- Gene2 20 5 3 5
+
 Gene1 and Gene2 represent the gene identifier and '1' describes the expression in the first condition, '3' the expression in the second condition, '5' the expression in the third condition and '10' the expresion in the fourth condition.
 
 ### Kegg_to_gene_mapping_file
@@ -37,6 +38,7 @@ The file should have the following structure:
 - Gene KEGG_orthologous
 - Gene1 KO111
 - Gene2 KO22
+
 Gene1 has the KEGG orthologous gene assingment KO111 and Gene2 the KEGG orthologous gene KO22.
 
 ### Gene_candidate_file 
@@ -45,6 +47,7 @@ The file should have the following structure
 - Gene1
 - Gene11
 - Gene55
+
 Gene1, Gene11 and Gene55 are then highlighted in the expression-informed KEGG pathway visualisations.
 
 ## Example
