@@ -1,12 +1,21 @@
 # KEGGexpressionMapper v0.1, Last update: 22 June 2017
-The KEGGexpressionMapper is bundled within a R package, allowing to visualize the expression of genes or abundances of proteins for any given species. The user need to provide a mapping to the expression (expression_mapping_file), a mapping to the KEGG orthologous (keg_to_gene_mapping_file), and a mapping of selected gene_candidate (gene_candidate_file). When a user has provided all these information, at first the KEGGexpressionMapper makes a lookup to find which pathways are associated with a KEGG ortholog, then for each pathway it visualizes the expression or protein abundancies by extracting the PNG visualisation and modifying them with the R-package PNG.
+The KEGGexpressionMapper allows to visualize the expression of genes or the abundances of proteins in any given species. Therefore, the user needs to provide a mapping to the expression information (expression_mapping_file), a mapping to the KEGG orthologous file (keg_to_gene_mapping_file), and a mapping of the selected gene_candidates (gene_candidate_file) which can represent e.g. differentially expressed genes. When a user has provided all these information, at first the KEGGexpressionMapper makes a lookup to find which pathways are associated with a KEGG ortholog, then for each pathway it visualizes the expression or protein abundancies by modifying the PNG visualisations that is provided in KEGG by using the R-package PNG.
+
 ## How to run it and install it
 
-Please copy the R package from: https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1096508/KEGGexpressionMapper_v0.1.tar.gz 
-or (Release option). Then, the R package can be easily installed with install.packages("KEGGexpressionMapper_v0.1.tar.gz")
-which then allows to load the library (library("KEGGExpressionMapper")
-and running the tool with
-KEGGexpressionMapper(expression_mapping_file, kegg_to_gene_mapping_file, gene_candidate_file)
+First, extract the latest version of the KEGGexpressionmapper (e.g. https://github.com/nthomasCUBE/KEGGexpressionmapper/archive/v0.1b.tar.gz)
+Step-1: Get release
+wget https://github.com/nthomasCUBE/KEGGexpressionmapper/archive/v0.1b.tar.gz
+Step-2: install it in R
+open R
+install.packages(‘v0.1b.tar.gz’)
+library(KEGGexpressionMapper)
+KEGGexpressionMapper(expression_mapping_file, keg_to_gene_mapping_file, gene_candidate_file)
+Alternative: Running demo data
+If you want the run the demo example, please copy the example data to your current directory: https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1097447/example.zip
+Then, it is possible to calculate the clams data as described in our manuscript.
+KEGGexpressionMapper()
+
 
 ## Parameter explaination
 ### Expression_Mapping_file
