@@ -5,8 +5,7 @@ pathways associated with the KEGG orthologs. Following that, for each pathway it
 ## How to run it and install it
 
 ### Step-1: Get release from Github
-wget https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1096508/KEGGexpressionMapper_v0.1.tar.gz
-
+wget https://github.com/nthomasCUBE/KEGGexpressionmapper/archive/v0.1.tar.gz
 
 ### Step-2: install it in R
 open R
