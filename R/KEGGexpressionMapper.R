@@ -18,8 +18,8 @@ KEGGexpressionMapper=function(gene_desc="example/DEG.txt", gene_kegg="example/KE
         gois=read.csv(gene_kegg,sep="\t",header=T)
         get_url(gois)
 
-        maps=read.csv("maps.txt",sep=" ",header=F); maps=maps[,1]
-        data=read.csv(gene_expr,sep=" ",header=T); expr=data[,1:dim(data)[2]]
+        maps=read.csv("maps.txt",sep="\t",header=F); maps=maps[,1]
+        data=read.csv(gene_expr,sep="\t",header=T); expr=data[,1:dim(data)[2]]
 
         expr=read.csv(gene_expr,header=T,sep=" ",row.names=1)
 
