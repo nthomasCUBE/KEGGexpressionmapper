@@ -27,6 +27,7 @@ modifyPlot=function(id, df, gois, expr, cand){
                         c_g=c_g[1,1]
                         for(p in 1:dim(expr)[2]){
                                 my_expr=expr[c_g,p]
+				my_expr=my_expr[my_expr>0]
                                 nmb_genes=nmb_genes+1
                                 A_=A+(p-1)*(C-A)/dim(expr)[2]
                                 C_=A+(p)*(C-A)/dim(expr)[2]
