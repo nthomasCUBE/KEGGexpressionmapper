@@ -21,7 +21,7 @@ You need to refer to the absolut or the relative path of each parameter.
 
 ### Alternative: Running demo data
 If you want the run the demo example, please copy the example data to your current directory: 
-- wget https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1100557/example.zip
+- wget https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1100575/example.zip
 Then, it is possible to calculate the clams data as described in our manuscript.
 - KEGGexpressionMapper()
 
