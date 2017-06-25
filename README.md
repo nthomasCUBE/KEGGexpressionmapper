@@ -21,27 +21,27 @@ You need to refer to the absolut or the relative path of each parameter.
 
 ### Alternative: Running demo data
 If you want the run the demo example, please copy the example data to your current directory: 
-- wget https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1097447/example.zip
+- wget https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1100546/example.zip
 Then, it is possible to calculate the clams data as described in our manuscript.
 - KEGGexpressionMapper()
 
 ## Parameter explaination
 ### Expression_Mapping_file
-Parameter: Expression_Mapping_file contains the genes in the first row, followed by the expression of each conditions. The values need to be seperated by a blank.
+Parameter: Expression_Mapping_file contains the genes in the first row, followed by the expression of each conditions. The values need to be seperated by a tabulator (!).
 
 The file should have the following structure:
 ```bash
 Gene conditionA conditionB conditionC conditionD
 Gene1 1 3 5 10
-Gene2 20 5 3 5
+Gene2 20  5 3 5
 ```
 Gene1 and Gene2 represent the gene identifier. '1' describes the expression in the first condition, '3' the expression in the second condition, '5' the expression in the third condition and '10' the expresion in the fourth condition.
 
 ### Kegg_to_gene_mapping_file
 Parameter: Kegg_to_gene_mapping_file contains the mapping of genes to the KEGG orthologous.
-The file should have the following structure:
+The file should have the following structure and seperated by a tabulatur (!):
 ```bash
-Gene KEGG_orthologous
+Gene  KEGG_orthologous
 Gene1 KO111
 Gene2 KO22
 ```
