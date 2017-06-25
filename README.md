@@ -1,5 +1,5 @@
 # KEGGexpressionMapper v0.1
-The KEGGexpressionMapper allows to visualize the expression of genes or the abundances of proteins in any given species. Therefore, the user needs to provide a mapping to the expression information (expression_mapping_file), a mapping to the KEGG orthologous file (kegg_to_gene_mapping_file), and a mapping of the selected gene_candidates (gene_candidate_file) which can represent e.g. differentially expressed genes. When a user has provided all these information, at first the KEGGexpressionMapper makes a lookup to determine 
+The KEGGexpressionMapper allows to visualize the expression of genes or the abundances of proteins in any given species for all KEGG pathways that contain an KEGG ortholog. Therefore, the user needs to provide a mapping to the expression information (expression_mapping_file), a mapping to the KEGG orthologous file (kegg_to_gene_mapping_file), and a mapping of the selected gene_candidates (gene_candidate_file) which can represent e.g. differentially expressed genes. When a user has provided all these information, at first the KEGGexpressionMapper makes a lookup to determine 
 pathways associated with the KEGG orthologs. Following that, for each pathway it visualizes the expression or protein abundancies by modifying the PNG visualisations which is provided in KEGG by using the R-package PNG.
 
 ## How to run it and install it
@@ -17,7 +17,7 @@ install.packages('KEGGexpressionMapper_v0.1.tar.gz')
 library(KEGGexpressionMapper)
 KEGGexpressionMapper(expression_mapping_file, kegg_to_gene_mapping_file, gene_candidate_file)
 ```
-You need to refer to the absolut or the relative path of each parameter.
+You need to refer to the absolute or the relative path of each parameter.
 
 ### Alternative: Running demo data
 If you want the run the demo example, please copy the example data to your current directory: 
@@ -25,9 +25,9 @@ If you want the run the demo example, please copy the example data to your curre
 Then, it is possible to calculate the clams data as described in our manuscript.
 - KEGGexpressionMapper()
 
-## Parameter explaination
+## Parameter explanation
 ### Expression_Mapping_file
-Parameter: Expression_Mapping_file contains the genes in the first row, followed by the expression of each conditions. The values need to be seperated by a tabulator (!).
+Parameter: Expression_Mapping_file contains the genes in the first row, followed by the expression of each conditions. The values need to be separated by a tabulator (!).
 
 The file should have the following structure:
 ```bash
@@ -39,13 +39,13 @@ Gene1 and Gene2 represent the gene identifier. '1' describes the expression in t
 
 ### Kegg_to_gene_mapping_file
 Parameter: Kegg_to_gene_mapping_file contains the mapping of genes to the KEGG orthologous.
-The file should have the following structure and seperated by a tabulatur (!):
+The file should have the following structure and separated by a tabulatur (!):
 ```bash
 Gene  KEGG_orthologous
 Gene1 KO111
 Gene2 KO22
 ```
-Gene1 has the KEGG orthologous gene assingment KO111 and Gene2 the KEGG orthologous gene KO22.
+Gene1 has the KEGG orthologous gene assignment KO111 and Gene2 the KEGG orthologous gene KO22.
 
 ### Gene_candidate_file 
 Parameter: gene_candidate_file contains the genes, that should be highlighted in the expression-informed visualisation.
