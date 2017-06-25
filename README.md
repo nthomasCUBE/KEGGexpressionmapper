@@ -1,4 +1,4 @@
-# KEGGexpressionMapper v0.1c
+# KEGGexpressionMapper v0.1
 The KEGGexpressionMapper allows to visualize the expression of genes or the abundances of proteins in any given species. Therefore, the user needs to provide a mapping to the expression information (expression_mapping_file), a mapping to the KEGG orthologous file (kegg_to_gene_mapping_file), and a mapping of the selected gene_candidates (gene_candidate_file) which can represent e.g. differentially expressed genes. When a user has provided all these information, at first the KEGGexpressionMapper makes a lookup to determine 
 pathways associated with the KEGG orthologs. Following that, for each pathway it visualizes the expression or protein abundancies by modifying the PNG visualisations which is provided in KEGG by using the R-package PNG.
 
