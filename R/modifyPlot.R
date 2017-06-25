@@ -27,13 +27,13 @@ modifyPlot=function(id, df, gois, expr, cand){
                         c_g=c_g[1,1]
                         for(p in 1:dim(expr)[2]){
                                 my_expr=expr[c_g,p]
-                                nmb_genes=nmb_genes+1
+				all_expr=expr[,p]
+ 			        all_expr=all_expr[all_expr>0]
+				nmb_genes=nmb_genes+1
                                 A_=A+(p-1)*(C-A)/dim(expr)[2]
                                 C_=A+(p)*(C-A)/dim(expr)[2]
                                 if(length(my_expr) > 0){
 		                             if(!is.na(my_expr)){
-						     all_expr=expr[,p]
-						     all_expr=all_expr[all_expr>0]
 		                                     if(my_expr>=0 && my_expr<quantile(all_expr,0.25)){
 		                                             col1=255;col2=255;col3=1
 		                                     }
