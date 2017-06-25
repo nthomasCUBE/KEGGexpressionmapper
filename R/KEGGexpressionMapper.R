@@ -9,7 +9,7 @@
 #' @examples
 #' cat_function()
 
-KEGGexpressionMapper=function(gene_desc="example/DEG.txt", gene_kegg="example/KEGG.txt", gene_expr="example/EXPRESSION.txt"){
+KEGGexpressionMapper=function(gene_desc="example/DEG.tab", gene_kegg="example/KEGG.tab", gene_expr="example/EXPRESSION.tab"){
 
         library(png)
         options(stringsAsFactors=FALSE)
@@ -18,10 +18,9 @@ KEGGexpressionMapper=function(gene_desc="example/DEG.txt", gene_kegg="example/KE
         gois=read.csv(gene_kegg,sep="\t",header=T)
         get_url(gois)
 
-        maps=read.csv("maps.txt",sep="\t",header=F); maps=maps[,1]
+        maps=read.csv("maps.txt",sep="\t",header=T); maps=maps[,1]
         data=read.csv(gene_expr,sep="\t",header=T); expr=data[,1:dim(data)[2]]
-
-        expr=read.csv(gene_expr,header=T,sep=" ",row.names=1)
+        expr=read.csv(gene_expr,header=T,sep="\t",row.names=1)
 
         arr=c()
         system("rm map*png")
