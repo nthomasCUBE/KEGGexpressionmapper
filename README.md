@@ -12,7 +12,9 @@ wget https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1096508/KEGGexpre
 open R
 
 ```bash
-install.packages('v0.1c.tar.gz')
+install.packages('png')
+install.packages('KEGGexpressionMapper_v0.1.tar.gz')
+
 library(KEGGexpressionMapper)
 KEGGexpressionMapper(expression_mapping_file, kegg_to_gene_mapping_file, gene_candidate_file)
 ```
