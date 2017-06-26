@@ -65,6 +65,11 @@ Gene1, Gene11 and Gene55 are then highlighted in the expression-informed KEGG pa
 We have chosen as example data the endosymbiont of the bivalve Loripes orbiculatus and previously calculated KEGG assignments
 with the help of the KAAST server.  All the three relevant files are stored in the example bin directory.
 
+### Color interpretation
+
+The colors shown in the diagram represent the [0,0.25], [0.25,0,50], [0.50, 0.75] and [0.75,1.00] quantile by considering
+only values that are greater 0. The colors shown are blue, green, yellow, oragen, red.
+
 ## Help line
 Help:
 For further requests and information, the following email can be used: thomas.nussbaumer@univie.ac.at .
