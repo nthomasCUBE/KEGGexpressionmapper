@@ -4,6 +4,9 @@ pathways associated with the KEGG orthologs. Following that, for each pathway it
 
 ## How to run it and install it
 
+### Requirements
+KEGGexpressionMapper was run and tested under Linux distribution and requires the tool 'wget' to be installed.
+
 ### Step-1: Get release from Github
 wget https://github.com/nthomasCUBE/KEGGexpressionmapper/archive/v0.1.tar.gz
 
