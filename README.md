@@ -6,7 +6,8 @@ pathways associated with the KEGG orthologs. Following that, for each pathway it
 
 ### Requirements
 KEGGexpressionMapper was run and tested under Linux distribution and requires the tool 'wget' to be installed.
-For Windows it is necessary to install wget and set the system path.
+For Windows it is necessary to install wget and set the system path, so we so far recommend the tool to be used
+in Linux only.
 
 ### Step-1: Get release from Github
 wget https://github.com/nthomasCUBE/KEGGexpressionmapper/archive/v0.1.tar.gz
@@ -19,7 +20,11 @@ install.packages('png')
 install.packages('KEGGexpressionMapper_v0.1.tar.gz')
 
 library(KEGGexpressionMapper)
-KEGGexpressionMapper(expression_mapping_file, kegg_to_gene_mapping_file, gene_candidate_file)
+KEGGexpressionMapper(gene_desc = "Use_case2/DEG.tab", gene_kegg = "Use_case2/KEGG.tab", gene_expr = "Use_case2/EXPRESSION.tab", is_timeseries = FALSE, excel = NA)
+e.g.
+KEGGexpressionMapper("Use_case1/DEG.tab","Use_case1/KEGG.tab","Use_case1/EXPRESSION.tab",FALSE,NA)
+or if Excel file contains all information
+KEGGexpressionMapper("","","",FALSE,"Use_case2/Demo_input_Excel.xlsx")
 ```
 You need to refer to the absolute or the relative path of each parameter.
 
