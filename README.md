@@ -10,14 +10,14 @@ For Windows it is necessary to install wget and set the system path, so we so fa
 in Linux only.
 
 ### Step-1: Get release from Github
-wget https://github.com/nthomasCUBE/KEGGexpressionmapper/archive/v0.1.tar.gz
+wget https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1189658/KEGGexpressionMapper.tar.gz
 
 ### Step-2: install it in R
 open R
 
 ```bash
 install.packages('png')
-install.packages('KEGGexpressionMapper_v0.1.tar.gz')
+install.packages('KEGGexpressionMapper.tar.gz')
 
 library(KEGGexpressionMapper)
 KEGGexpressionMapper(gene_desc = "Use_case2/DEG.tab", gene_kegg = "Use_case2/KEGG.tab", gene_expr = "Use_case2/EXPRESSION.tab", is_timeseries = FALSE, excel = NA)
