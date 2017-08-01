@@ -6,6 +6,7 @@ pathways associated with the KEGG orthologs. Following that, for each pathway it
 
 ### Requirements
 KEGGexpressionMapper was run and tested under Linux distribution and requires the tool 'wget' to be installed.
+For Windows it is necessary to install wget and set the system path.
 
 ### Step-1: Get release from Github
 wget https://github.com/nthomasCUBE/KEGGexpressionmapper/archive/v0.1.tar.gz
@@ -72,7 +73,7 @@ only values that are greater 0. The colors shown are blue, green, yellow, oragen
 
 ## Help line
 Help:
-For further requests and information, the following email can be used: thomas.nussbaumer@univie.ac.at .
+For further requests and information, the following email can be used: thomas.nussbaumer<AT>univie.ac.at .
 
 
 
