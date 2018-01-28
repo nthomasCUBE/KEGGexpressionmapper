@@ -1,4 +1,4 @@
-# KEGGexpressionMapper v0.1
+# KEGGexpressionMapper v0.1b
 The KEGGexpressionMapper allows to visualize the expression of genes or the abundances of proteins in any given species for all KEGG pathways that contain an KEGG ortholog. Therefore, the user needs to provide a mapping to the expression information (expression_mapping_file), a mapping to the KEGG orthologous file (kegg_to_gene_mapping_file), and a mapping of the selected gene_candidates (gene_candidate_file) which can represent e.g. differentially expressed genes. When a user has provided all these information, at first the KEGGexpressionMapper makes a lookup to determine 
 pathways associated with the KEGG orthologs. Following that, for each pathway it visualizes the expression or protein abundancies by modifying the PNG visualisations which is provided in KEGG by using the R-package PNG.
 
@@ -21,10 +21,6 @@ install.packages('KEGGexpressionMapper.tar.gz')
 
 library(KEGGexpressionMapper)
 KEGGexpressionMapper(gene_desc = "Use_case2/DEG.tab", gene_kegg = "Use_case2/KEGG.tab", gene_expr = "Use_case2/EXPRESSION.tab", is_timeseries = FALSE, excel = NA)
-e.g.
-KEGGexpressionMapper("Use_case1/DEG.tab","Use_case1/KEGG.tab","Use_case1/EXPRESSION.tab",FALSE,NA)
-or if Excel file contains all information
-KEGGexpressionMapper("","","",FALSE,"Use_case2/Demo_input_Excel.xlsx")
 ```
 You need to refer to the absolute or the relative path of each parameter.
 
