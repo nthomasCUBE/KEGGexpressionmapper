@@ -29,6 +29,7 @@ modifyPlot=function(id, df, gois, expr, cand){
                                 A_=A+(p-1)*(C-A)/dim(expr)[2]
                                 C_=A+(p)*(C-A)/dim(expr)[2]
 
+                                if(length(my_expr) > 0){
                                      if(!is.na(my_expr)){
                                              if(sum(my_expr)==0){
                                              }else if(my_expr>0 && my_expr<=quantile(all_expr,0.25)){
@@ -54,7 +55,4 @@ modifyPlot=function(id, df, gois, expr, cand){
         system(paste("rm",paste(id,".png",sep="")))
         writePNG(img,paste(id,"_modified",".png",sep=""))
         return(cur_entry)
-
 }
-
-
