@@ -1,4 +1,4 @@
-# KEGGexpressionMapper v0.1b
+# KEGGexpressionMapper v0.2b
 The KEGGexpressionMapper allows to visualize the expression of genes or the abundances of proteins in any given species for all KEGG pathways that contain an KEGG ortholog. Therefore, the user needs to provide a mapping to the expression information (expression_mapping_file), a mapping to the KEGG orthologous file (kegg_to_gene_mapping_file), and a mapping of the selected gene_candidates (gene_candidate_file) which can represent e.g. differentially expressed genes. When a user has provided all these information, at first the KEGGexpressionMapper makes a lookup to determine 
 pathways associated with the KEGG orthologs. Following that, for each pathway it visualizes the expression or protein abundancies by modifying the PNG visualisations which is provided in KEGG by using the R-package PNG.
 
@@ -10,7 +10,8 @@ For Windows it is necessary to install wget and set the system path, so we so fa
 in Linux only.
 
 ### Step-1: Get release from Github
-wget https://github.com/nthomasCUBE/KEGGexpressionmapper/files/1189658/KEGGexpressionMapper.tar.gz
+wget https://github.com/nthomasCUBE/KEGGexpressionmapper/archive/v0.2.tar.gz
+mv v0.2.tar.gz KEGGexpressionMapper.tar.gz
 
 ### Step-2: install it in R
 open R
