@@ -1,12 +1,8 @@
 modifyPlot=function(id, df, gois, expr, cand){
-
         options(stringsAsFactors=FALSE)
-
         system(paste("wget http://www.kegg.jp/kegg/pathway/map/",id,".png",sep=""))
-
         img=readPNG(paste(id,".png",sep=""))
         nmb_genes=0; ovl=0
-
         for(x in 1:dim(df)[1]){
                 A=df[x,1];B=df[x,2];C=df[x,3];D=df[x,4];E=df[x,5]
                 A=as.integer(A);B=as.integer(B);C=as.integer(C);D=as.integer(D)
@@ -27,32 +23,30 @@ modifyPlot=function(id, df, gois, expr, cand){
                         c_g=c_g[1,1]
                         for(p in 1:dim(expr)[2]){
                                 my_expr=expr[c_g,p]
-				all_expr=expr[,p]
- 			        all_expr=all_expr[all_expr>0]
-				nmb_genes=nmb_genes+1
+                                all_expr=expr[,p]
+                                all_expr=all_expr[all_expr>0]
+                                nmb_genes=nmb_genes+1
                                 A_=A+(p-1)*(C-A)/dim(expr)[2]
                                 C_=A+(p)*(C-A)/dim(expr)[2]
-                                if(length(my_expr) > 0){
-		                             if(!is.na(my_expr)){
-		                                     if(my_expr>=0 && my_expr<quantile(all_expr,0.25)){
-		                                             col1=255;col2=255;col3=1
-		                                     }
-		                                     if(my_expr>=quantile(all_expr,0.25) && my_expr<quantile(all_expr,0.50)){
-		                                             col1=155;col2=1;col3=155
-		                                     }
-		                                     if(my_expr>=quantile(all_expr,0.50) && my_expr<quantile(all_expr,0.75)){
-		                                             col1=1;col2=100;col3=200
-		                                     }
-		                                     if(my_expr>=quantile(all_expr,0.75) && my_expr<=quantile(all_expr,1)){
-		                                             col1=1;col2=255;col3=255
-		                                     }
-		                                     for(p1 in A_:C_){
-		                                             for(p2 in B:D){
-		                                                     img[p2,p1,1]=col1;img[p2,p1,2]=col2;img[p2,p1,3]=col3;img[p2,p1,4]=1
-		                                             }
-		                                     }
-		                             }
-		                          }
+
+                                     if(!is.na(my_expr)){
+                                             if(sum(my_expr)==0){
+                                             }else if(my_expr>0 && my_expr<=quantile(all_expr,0.25)){
+                                                     col1=255;col2=255;col3=1
+                                             }else if(my_expr>=quantile(all_expr,0.25) && my_expr<quantile(all_expr,0.50)){
+                                                     col1=155;col2=1;col3=155
+                                             }else if(my_expr>=quantile(all_expr,0.50) && my_expr<quantile(all_expr,0.75)){
+                                                     col1=1;col2=100;col3=200
+                                             }else if(my_expr>=quantile(all_expr,0.75) && my_expr<=quantile(all_expr,1)){
+                                                     col1=1;col2=255;col3=255
+                                             }
+                                             for(p1 in A_:C_){
+                                                     for(p2 in B:D){
+                                                             img[p2,p1,1]=col1;img[p2,p1,2]=col2;img[p2,p1,3]=col3;img[p2,p1,4]=1
+                                                     }
+                                             }
+                                     }
+                                }
                         }
                 }
         }
@@ -60,6 +54,7 @@ modifyPlot=function(id, df, gois, expr, cand){
         system(paste("rm",paste(id,".png",sep="")))
         writePNG(img,paste(id,"_modified",".png",sep=""))
         return(cur_entry)
+
 }
 
 
