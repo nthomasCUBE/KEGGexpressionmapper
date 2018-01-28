@@ -11,7 +11,7 @@ get_url=function(gois){
                                         url=paste(url,"ko:",kegg_u[x],sep="")
                                 }
                         }
-                        if(y>100){
+                        if(y>10){
                                 url=paste("http://www.genome.jp/dbget-bin/get_linkdb?-t+pathway+",url,sep="")
                                 system(paste("wget ",url,sep=""))
                                 system(paste("less get_linkdb* | grep -Po '(map.*)\"' | sed 's/\"//g' | sort | uniq >> maps.txt"))
