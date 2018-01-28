@@ -9,7 +9,7 @@
 #' @examples
 #' cat_function()
 
-KEGGexpressionMapper=function(gene_desc="example/DEG.tab", gene_kegg="example/KEGG.tab", gene_expr="example/EXPRESSION.tab"){
+KEGGexpressionMapper=function(gene_desc="Use_case2/DEG.tab", gene_kegg="Use_case2/KEGG.tab", gene_expr="Use_case2/EXPRESSION.tab"){
 
         library(png)
         options(stringsAsFactors=FALSE)
@@ -19,8 +19,8 @@ KEGGexpressionMapper=function(gene_desc="example/DEG.tab", gene_kegg="example/KE
         get_url(gois)
 
         maps=read.csv("maps.txt",sep="\t",header=F); maps=maps[,1]
-        data=read.csv(gene_expr,sep="\t",header=T); expr=data[,1:dim(data)[2]]
-        expr=read.csv(gene_expr,header=T,sep="\t",row.names=1)
+        data=read.csv(gene_expr,sep="\t",header=T);
+        expr=data[,1:dim(data)[2]]
 
         arr=c()
         system("rm map*png")
@@ -40,5 +40,6 @@ KEGGexpressionMapper=function(gene_desc="example/DEG.tab", gene_kegg="example/KE
                 }
         }
         write.table(pw_df,"content.txt")
+
 }
 
