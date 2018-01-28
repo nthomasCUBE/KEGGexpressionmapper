@@ -75,7 +75,7 @@ only values that are greater 0. The colors shown are blue, green, yellow, oragen
 
 ## Help line
 Help:
-For further requests and information, the following email can be used: thomas.nussbaumer<AT>univie.ac.at .
+For further requests and information, the following email can be used: thomas.nussbaumer < AT > univie.ac.at .
 
 
 
