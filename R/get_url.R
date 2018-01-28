@@ -19,12 +19,14 @@ get_url=function(gois){
                                 url=""
                         }
                         y=y+1
+
                 }
                 url=paste("http://www.genome.jp/dbget-bin/get_linkdb?-t+pathway+",url,sep="")
                 system(paste("wget ",url,sep=""))
                 system(paste("less get_linkdb* | grep -Po '(map.*)\"' | sed 's/\"//g' | sort | uniq >> maps.txt"))
                 system("rm get_linkdb*")
-                system("tmp=$(mktemp); less maps.txt | sort | uniq > $tmp; mv $tmp maps.txt")
+                system("tmp=$(mktemp); less maps.txt | sed 's/+/ /g' | cut -f 1 -d ' ' | sort | uniq > $tmp; mv $tmp maps.txt")
+
 }
 
 
