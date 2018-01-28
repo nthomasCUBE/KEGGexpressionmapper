@@ -1,5 +1,4 @@
 get_cand=function(gene_desc, gene_kegg){
-
                 cand=read.csv(gene_desc,sep=" ",header=T)
                 allowed_genes=c()
                 for(x in 1:dim(cand)[1]){
