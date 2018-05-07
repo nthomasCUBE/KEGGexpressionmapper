@@ -14,13 +14,34 @@ KEGGexpressionMapper=function(gene_desc="Use_case2/DEG.tab", gene_kegg="Use_case
         library(png)
         options(stringsAsFactors=FALSE)
 
+        # ------------------------------------------------------------------------------
         cand=get_cand(gene_desc, gene_kegg)
+        print(paste("We are integrating",length(cand),"KEGG orthologs"))
+
+        # ------------------------------------------------------------------------------
+
         gois=read.csv(gene_kegg,sep="\t",header=T)
+        print(paste("We are integrating",dim(gois)[1],"KEGG-gene assignments"))
+
+        # ------------------------------------------------------------------------------
+
         get_url(gois)
 
+        # ------------------------------------------------------------------------------
+
         maps=read.csv("maps.txt",sep="\t",header=F); maps=maps[,1]
+        print(paste("We are analysing",length(maps),"KEGG pathways"))
+
+        # ------------------------------------------------------------------------------
+
         data=read.csv(gene_expr,sep="\t",header=T);
+        print(paste("We are analysing",dim(data)[1],"genes with expression"))
+
+        # ------------------------------------------------------------------------------
+
         expr=data[,1:dim(data)[2]]
+
+        # ------------------------------------------------------------------------------
 
         arr=c()
         system("rm map*png")
@@ -38,8 +59,12 @@ KEGGexpressionMapper=function(gene_desc="Use_case2/DEG.tab", gene_kegg="Use_case
                         colnames(new_entry)=c("A","B","C","D")
                         pw_df=rbind(pw_df,new_entry)
                 }
+                #exit
         }
+
+        # ------------------------------------------------------------------------------
+
         write.table(pw_df,"content.txt")
 
+        # ------------------------------------------------------------------------------
 }
-
