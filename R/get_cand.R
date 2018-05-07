@@ -16,4 +16,3 @@ get_cand=function(gene_desc, gene_kegg){
                 }
                 return(arr)
 }
-
