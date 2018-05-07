@@ -1,7 +1,7 @@
 get_pathway=function(id){
         options(stringsAsFactors=FALSE)
 
-        thepage = readLines(paste('http://www.kegg.jp/pathway/',id,sep=""))
+        thepage = readLines(paste('http://www.kegg.jp/pathway/',id,sep=""),warn=FALSE)
         ix=grep("<area",thepage)
         thepage=thepage[ix]
         df=data.frame()
@@ -26,4 +26,3 @@ get_pathway=function(id){
         return(df)
 
 }
-
