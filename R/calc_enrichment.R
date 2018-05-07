@@ -1,3 +1,4 @@
+calc_enrichment=function(){
         data=read.csv("content.txt",sep=" ",header=T)
         my_map=c()
         my_pval=c()
